@@ -1,0 +1,16 @@
+﻿<div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h3>Are you sure you want to remove {{controller.carToDelete.make}} {{controller.carToDelete.model}}?</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="editCarButtons">
+                <input type="button" value="Yes" ng-click="controller.deleteCar()" class="btn btn-danger" />
+                <input type="button" value="No" ng-click="controller.cancel()" class="btn btn-success" />
+                <br />
+            </div>
+        </div>
+    </div>
+</div>

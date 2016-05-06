@@ -1,0 +1,132 @@
+﻿
+
+#promo-1 {
+    background-image: url("http://s31.postimg.org/tt3jep7nv/free_forest_road_wallpaper_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.welcome {
+    color: white;
+    font-size: 32px;
+}
+
+.welcome-paragraph {
+    color: white;
+    font-size: 20px;
+}
+
+#homeRegisterBut {
+    margin-bottom: 5px;
+}
+
+#uploadBut {
+    margin-left: 14px;
+}
+
+.btn.btn-success.btn-block:hover {
+    color: #ff6a00;
+    background-image: linear-gradient(to bottom, black,black;
+    background-size: cover;
+    border-color: red red red;
+}
+
+
+#testing {
+    background-color: #a52020;
+    color: white;
+}
+
+
+.feature-text {
+    background-color: black;
+    font-size: 22px;
+    padding-top: 10px;
+}
+
+.feature-text, p {
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
+.icon {
+    padding-top: 25px;
+}
+
+.copyright-bar {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.ng-invalid.ng-touched {
+    background-color: red;
+    opacity: .6;
+    border: 1px solid black;
+}
+
+#modelInput {
+    border: 1px solid black;
+}
+
+.ng-valid.ng-touched {
+    background-color: lawngreen;
+}
+
+.error {
+    background-color: red;
+}
+
+/* css for logout view*/
+
+ul#user_spot li {
+    float: left;
+    position: relative;
+    padding: 5px;
+    background-color: #ccc;
+}
+
+ul#user_spot_links {
+    position: absolute;
+    top: 28px;
+    display: none;
+}
+
+    ul#user_spot_links li {
+        float: none;
+        clear: both;
+        padding: 5px;
+        background-color: #aaa;
+        border: 1px solid #999;
+        white-space: nowrap;
+    }
+
+ul#user_spot:hover ul#user_spot_links {
+    display: block;
+}
+
+#iconimage {
+    height: 80%;
+    width: 80%;
+    margin: 0 auto;
+    border-style: solid;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.progressbar {
+    width: 160px;
+}
+
+.underlined-title {
+    color: white;
+}
+
+.aboutContent {
+    color: white;
+}
+
+#aboutSection2 {
+    color: white;
+}

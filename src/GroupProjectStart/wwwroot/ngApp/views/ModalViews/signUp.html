@@ -1,0 +1,69 @@
+﻿<div class="container-fluid" id="signUpModal">
+
+    <div class="container-fluid">
+        <div class="modal-dialog">
+            <div class="modal-content" id="signUpModalContent">
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        Register
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <fieldset>
+                        <legend>Local Registration</legend>
+                        <ul>
+                            <li ng-repeat="message in controller.validationMessages">
+                                {{message}}
+                            </li>
+                        </ul>
+
+                        <form ng-submit="controller.register()">
+                            <div>
+                                <label>Email:</label>
+                                <input ng-model="controller.registerUser.email" />
+                            </div>
+                            <div>
+                                <label>Password:</label>
+                                <input ng-model="controller.registerUser.password" />
+                            </div>
+                            
+                            <div>
+                                <label>Confirm Password:</label>
+                                <input ng-model="controller.registerUser.confirmPassword" />
+                            </div>
+                            <div>
+                                <label>User Name:</label>
+                                <input type="text" ng-model="controller.registerUser.displayName" />
+                            </div>
+                            <div>
+                                <label>First Name:</label>
+                                <input type="text" ng-model="controller.registerUser.firstName" />
+                            </div>
+                            <div>
+                                <label>Last Name:</label>
+                                <input type="text" ng-model="controller.registerUser.lastName" />
+                            </div>
+                            <div>
+                                <label>Check this box if you want to rent out your car</label>
+                                <input type="checkbox" ng-model="controller.registerUser.isLoaner" value="true"/>
+                            </div>
+                            <div>
+                                <input type="button" value="Upload Image" ng-click="controller.pickFile()"/>
+                            </div>
+                            <input type="submit" value="Register" />
+                        </form>
+
+                    </fieldset>
+                </div>
+                <div class="modal-footer">
+
+                 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

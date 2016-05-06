@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="GroupProjectStart">
+<head>
+    <title></title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/css/style.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link href="~/css/cardetailstyles.css" rel="stylesheet" />
+    <link href="~/css/carpagestyles.css" rel="stylesheet" />
+    <link href="~/css/indexstyle.css" rel="stylesheet" />
+    <link href="~/css/profilepagestyles.css" rel="stylesheet" />
+    <base href="/" />
+</head>
+<body id="pageBody" ng-controller="AccountController as account" ng-cloak>
+    <div class="navbar navbar-fixed-top navbar-inverse">
+
+        <a class="navbar-brand" href="/">
+            <img src="~/images/drawing.png" alt="Your Logo" style="height: 55px; width: auto; margin-top: -15px;" id="logoImage" class="img-responsive" />
+        </a>
+        <div>
+            <ul class="nav navbar-nav navButtons">
+                <li class="active">
+                    <a id="navBut2" href="/">Home</a>
+                </li>
+                <li class="active">
+                    <a href="about">About</a>
+                </li>
+                <li class="active">
+                    <a href="/userCars">Cars</a>
+                </li>
+                <li class="active">
+                    <a ng-if="account.getClaim('isAdmin')" href="/profiles">Profiles</a>
+                </li>
+                
+            </ul>
+            <ul class="nav navbar-nav navButtons pull-right">
+                <li class="active">
+                    <a ng-show="account.isLoggedIn()" href="/profile/{{account.getUserId()}}">My Profile</a>
+                </li>
+                <li class="active" ng-hide="account.isLoggedIn()">
+                    <a class="navbar-right-btn" ng-click="account.showSignInModal()">Log In</a>
+                </li>
+                <li class="active" ng-hide="account.isLoggedIn()">
+                    <a class="navbar-right-btn" account.showSignUpModal()>Sign Up</a>
+                </li>
+                <li class="active" ng-show="account.isLoggedIn()">
+                    <a class="navbar-right-btn" ng-click="account.logout()">Logout</a>
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <div id="pageContentContainer" class="container">
+        <ui-view></ui-view>
+        <div class="container" style="background-color:  #2c2727; color: white;">
+            <div class="text-center">
+                <div class="copyright-text">
+                    <p>© COPYRIGHT 2016 - RENT MY CAR - ALL RIGHTS RESERVED.</p>
+                    <p>Powered by </p><span><img ng-src="http://www.alchemyapi.com/sites/default/files/Logo60Height.png" /></span>
+                </div>
+            </div>
+        </div>
+        </div>
+   
+
+
+    <!-- Library Files -->
+    <script src="~/lib/angular/angular.js"></script>
+    <script src="~/lib/angular-resource/angular-resource.js"></script>
+    <script src="~/lib/angular-animate/angular-animate.js"></script>
+    <script type="text/javascript" src="//api.filestackapi.com/filestack.js"></script>
+    <script src="~/lib/angular-filepicker/angular-filepicker.js"></script>
+    <script src="~/lib/angular-touch/angular-touch.js"></script>
+    <script src="~/lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="~/lib/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="~/lib/lodash/lodash.js"></script>
+    <script src="~/lib/angular-simple-logger/dist/angular-simple-logger.js"></script>
+    <script src="~/lib/angular-google-maps/dist/angular-google-maps.js"></script>
+
+    <!-- App Files-->
+
+    <script src="~/all.js"></script>
+
+</body>
+</html>

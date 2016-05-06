@@ -1,0 +1,91 @@
+﻿<div class="container-fluid" id="carDetailBody">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h1>
+                    Car Details  <small>User information attached</small>
+                </h1>
+            </div>
+            <div class="row">
+                <div>
+                    <div class="col-md-7">
+                        <h3>
+                            Car To Rent
+                        </h3><img alt="Bootstrap Image Preview" class="carAndLoanerImg text-center img-responsive img-thumbnail" style="max-height: 500px;  max-width: 600px" src="{{controller.car.image}}" />
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Make: {{controller.car.make}} model: {{controller.car.model}}</p>
+                                <p>Year: {{controller.car.year}} Doors: {{controller.car.doors}} </p>
+                                <p>Condition: {{controller.car.condition}} Seats: {{controller.car.seats}}</p>
+                            </div>
+                            <div class="col-md-12">
+                                MPG: HWY = {{controller.car.hwyMpg}}<br /> CITY = {{controller.car.ctyMpg}}<br />
+
+                                <strong>Description:</strong>  {{controller.car.description}}<br />
+                                Date Added: {{controller.car.dateAdded | date}}
+                            </div>
+
+                            <div class="col-lg-6">
+
+                                <div class="btn btn-block btn-danger" ng-click="controller.carReviewModal(controller.car.id)" id="rateDriverBut">REVIEW CAR</div>
+                                <div class="btn btn-block btn-danger" ng-click="controller.carRateModal(controller.car.id)" id="rateDriverBut">RATE CAR</div>
+                                <div class="btn btn-block btn-danger" ng-click="controller.carReviewDetails(controller.car.id)" id="rateDriverBut">VIEW CAR REVIEWS</div><br />
+                            </div>
+                            <div class="col-lg-6">
+                                <p>Car Rating:</p>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: {{controller.car.averageRating / 5 * 100}}%">
+                                            <span class="sr-only">80% Complete (danger)</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>
+                            Car Owner
+                        </h3>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <a href="/profile/{{controller.user.id}}">
+                                    <img alt="Bootstrap Image Preview" class="carAndLoanerImg pull-left" src="{{controller.user.image}}" style="height: 200px; width: 200px;" />
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                User Details
+                                <hr />
+                                <ul class="list-group table-responsive" id="userDetails">
+                                    <li class="list-group-item">User Name: {{controller.user.displayName}}</li>
+                                    <li class="list-group-item">Name: {{controller.user.firstName}} {{controller.user.lastName}}</li>
+                                    <li class="list-group-item">Rating:  {{controller.user.averageRating}}</li>
+
+                                </ul>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: {{controller.user.averageRating / 5 * 100}}%">
+                                        <span class="sr-only">80% Complete (danger)</span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="col-lg-6">
+                                        <br />
+                                        <div class="btn btn-block btn-danger" ng-click="controller.driverRateModal(controller.user.id)" id="rateDriverBut">RATE OWNER</div>
+                                        <div class="btn btn-block btn-danger" ng-click="controller.driverReviewModal(controller.user.id)" id="rateDriverBut">REVIEW OWNER</div>
+                                        <div class="btn btn-block btn-danger" ng-click="controller.ownerReviewDetails(controller.user.id)" id="rateDriverBut">VIEW OWNER REVIEWS</div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿<div class="row driverReviews">
+    <div class="col-lg-12">
+        <div class="col-lg-12">
+            <div class="col-lg-6">
+                <img class="img-responsive" ng-src="{{controller.car.image}}" style="height: 250px; width: 350px;" />
+            </div>
+            <ul class="list-group table-responsive" id="userDetails">
+          
+                <li class="list-group-item">Details: {{controller.car.year}} {{controller.car.make}} {{controller.car.model}}</li>
+                <li class="list-group-item">Rating:  {{controller.car.averageRating}}/5</li>
+                <li class="list-group-item">Doors:  {{controller.car.door}}</li>
+                <li class="list-group-item">Price Per Day:  {{controller.car.price}}</li>
+                <li class="list-group-item">Condition:  {{controller.car.condition}}</li>
+
+
+
+
+            </ul>
+        </div>
+        <div class="col-lg-12">
+            <div ng-repeat="review in controller.car.reviews">
+                <div class="col-lg-12 list-group reviewRepeat">
+                    <div class="col-lg-8 list-group-item-info pull-left reviewRepeat">
+                        {{review.title}} <hr id="reviewHr" />
+
+                        {{review.message}}
+                        <div class="col-lg-4 pull-right" ng-repeat="sent in review.sentimentEntities">
+                            {{sent.sentimentScore}}
+                            {{sent.type}}
+                        </div>
+                    </div>
+                </div>
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>
