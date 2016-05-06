@@ -25,8 +25,7 @@ namespace GroupProjectStart.Services
         /// </summary>
         /// <returns></returns>
         public List<DriverReview> GetReviews()
-        {
-            
+        { 
             var data = _repo.Query<DriverReview>().ToList();
             return data;
         }
